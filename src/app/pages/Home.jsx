@@ -4,10 +4,15 @@ import Card from "../components/Card";
 function Home() {
   return (
     <>
-      <h1>Coucou</h1>
+      <div className="banner">
+        <p className="banner__text">Chez vous, partout et ailleurs</p>
+        <img className="banner__img" src="/public/assets/img-accueil.jpg" />
+      </div>
+      <section className="gallery">
       {logements.map(({ title, cover, id }) => (
         <Card key={id} title={title} cover={cover} id={id} />
       ))}
+      </section>
     </>
   );
 }

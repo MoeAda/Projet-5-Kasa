@@ -2,13 +2,11 @@ import logo from '../../../public/assets/LOGO.png'
 
 function Header() {
 	return (
-		<header>
-			<img src={logo} alt='La maison jungle' className='lmj-logo' />
-			<nav>
-				<ul>
-					<li>Accueil</li>
-					<li>A Propos</li>
-				</ul>
+		<header className="header">
+			<img src={logo} alt="logo Kasa location immobilière" className="header__logo" />
+			<nav className="header__menu">
+			    <a href="/">Accueil</a>
+				<a href="/a-propos/">A Propos</a>
 			</nav>
 		</header>
 	)
