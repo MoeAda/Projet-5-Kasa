@@ -1,5 +1,10 @@
 body {
   margin: 50px;
+  font-family: "Montserrat";
+}
+
+a {
+  text-decoration: none;
 }
 
 .gallery {
@@ -10,10 +15,6 @@ body {
   border-radius: 25px;
   background-color: #F6F6F6;
   padding: 50px;
-}
-
-a {
-  text-decoration: none;
 }
 
 .card {
@@ -70,9 +71,7 @@ a {
 }
 
 .header__menu a {
-  text-decoration: none;
   color: black;
-  font-family: "Montserrat";
 }
 
 .banner {
@@ -112,6 +111,58 @@ a {
   width: 100%;
   height: 223px;
   border-radius: 25px;
+}
+
+.footer {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  margin-top: 50px;
+}
+
+.footer__text {
+  color: white;
+}
+
+.slider {
+  position: "relative";
+  height: "100%";
+}
+
+.slider__leftArrow {
+  position: "absolute";
+  top: "50%";
+  transform: "translate(0, -50%)";
+  left: "32px";
+  font-size: "45px";
+  color: "#fff";
+  z-index: 1;
+  cursor: pointer;
+}
+
+.slider__rightArrow {
+  position: "absolute";
+  top: "50%";
+  transform: "translate(0, -50%)";
+  right: "32px";
+  font-size: "45px";
+  color: "#fff";
+  z-index: 1;
+  cursor: "pointer";
+}
+
+.slider__dotsContainer {
+  display: "flex";
+  justify-content: "center";
+}
+
+.slider__dot {
+  margin: "0 3px";
+  cursor: "pointer";
+  font-size: "20px";
 }
 
 /*# sourceMappingURL=style.css.map */

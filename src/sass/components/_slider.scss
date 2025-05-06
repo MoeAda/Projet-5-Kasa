@@ -1,0 +1,38 @@
+.slider {
+        position: "relative";
+        height: "100%";
+      }; 
+
+ .slider__leftArrow {
+    position: "absolute";
+    top: "50%";
+    transform: "translate(0, -50%)";
+    left: "32px";
+    font-size: "45px";
+    color: "#fff";
+    z-index: 1;
+    cursor: pointer;
+  };
+
+.slider__rightArrow {
+    position: "absolute";
+    top: "50%";
+    transform: "translate(0, -50%)";
+    right: "32px";
+    font-size: "45px";
+    color: "#fff";
+    z-index: 1;
+    cursor: "pointer"
+  }
+
+ .slider__dotsContainer {
+    display: "flex";
+    justify-content: "center";
+  };
+
+
+.slider__dot {
+    margin: "0 3px";
+    cursor: "pointer";
+    font-size: "20px";
+  };
