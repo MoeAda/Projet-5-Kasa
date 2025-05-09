@@ -1,12 +1,12 @@
 function Card({ title, cover, id }) {
   return (
     <>
-      <figure className="card">
-        <a href={`/logement/${id}`} key={id}>
-        <img src={cover} alt={title} className="card__img" />
-        <figcaption className="card__title">{title}</figcaption>
+      <a href={`/logement/${id}`} key={id}>
+        <figure className="card">
+          <img src={cover} alt={title} className="card__img" />
+          <figcaption className="card__title">{title}</figcaption>
+        </figure>
       </a>
-      </figure>
     </>
   );
 }

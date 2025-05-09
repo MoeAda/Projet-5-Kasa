@@ -1,43 +1,41 @@
 import { useState } from "react";
-import logements from "../../data/logement.json";
 
-const ImageSlider = ({ slides }) => {
+const ImageSlider = ({ pictures, title }) => {
+  const length = pictures.length;
   const [currentIndex, setCurrentIndex] = useState(0);
-  const goToPrevious = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+
+  function handlePreviewClick() {
+    const newIndex = (currentIndex - 1 + length) % length;
     setCurrentIndex(newIndex);
-  };
-  const goToNext = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+  }
+
+  function handleForwardClick() {
+    const newIndex = (currentIndex + 1) % length;
     setCurrentIndex(newIndex);
-  };
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
+  }
 
   return (
     <div className="slider">
-      <div>
-        <div onClick={goToPrevious} className="slider__leftArrow">
-          ❰
-        </div>
-        <div onClick={goToNext} className="slider__rightArrow">
-          ❱
-        </div>
-      </div>
-      <div className="slider__dotsContainer">
-        {logements.map((pictures, picturesIndex) => (
-          <div
-            className="slider__dot"
-            key={picturesIndex}
-            onClick={() => goToSlide(pictureIndex)}
-          >
-            ●
+      {length > 1 && (
+        <>
+          <div onClick={handlePreviewClick} className="slider__arrow arrowLeft">❰</div>
+          <div>
+            <img src={pictures[currentIndex]} alt={title} className="slider__img"/>
           </div>
-        ))}
-      </div>
+          <div onClick={handleForwardClick} className="slider__arrow arrowRight">❱</div>
+          <div className="slider__dotcontainer">
+            {pictures.map((_, index) => (
+              <button
+                key={index}
+                className={currentIndex === index ? "slider__dot dot-active" : "slider__dot dot-inactive"}
+                onClick={() => setCurrentIndex(index)}
+              >
+                ●
+              </button>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 };
