@@ -3,7 +3,9 @@ import { useParams } from "react-router-dom";
 import logements from "../../data/logement.json";
 import Slider from "../components/Slider";
 import Host from "../components/Host";
+import Tags from "../components/Tags";
 import Error404 from "./Error404";
+import Rating from "../components/Rating";
 
 function House() {
   const [logement, setLogement] = useState({
@@ -34,14 +36,18 @@ function House() {
   return (
     <>
       <div className="house">
-      <Slider
+        <Slider
           key={logement.id}
           pictures={logement.pictures}
           title={logement.title}
         />
-        <h1>COMPOSANT LOGEMENT</h1>
-        <h2>{logement.title}</h2>
-        <Host owner={logement.host} />
+        <h2 className="house__title">{logement.title}</h2>
+        <p>{logement.location}</p>
+        <div className="house__host">
+          <Host owner={logement.host} />
+        </div>
+        <div><Rating stars={logement.rating} /></div>
+        <div><Tags tags={logement.tags} /></div>
       </div>
     </>
   );
