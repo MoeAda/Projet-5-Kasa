@@ -6,6 +6,7 @@ import Host from "../components/Host";
 import Tags from "../components/Tags";
 import Error404 from "./Error404";
 import Rating from "../components/Rating";
+import Collapse from "../components/Collapse";
 
 function House() {
   const [logement, setLogement] = useState({
@@ -48,6 +49,8 @@ function House() {
         </div>
         <div><Rating stars={logement.rating} /></div>
         <div><Tags tags={logement.tags} /></div>
+        <div><Collapse content={logement.description} title="Description" /></div>
+        <div><Collapse content={logement.equipments} title="Équipements" /></div>  
       </div>
     </>
   );
