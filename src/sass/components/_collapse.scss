@@ -1,31 +1,57 @@
 .collapse {
-    margin: 1rem 0;
     overflow: hidden;
     transition: all 0.3s ease;
     background-color: $color-primary;
     border-radius: 10px;
+
+    &__content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      background-color: #f6f6f6;
+      transition: 0.5s ease-in-out;
+
+      &__text {
+        margin: 0;
+      }
+      
+      &__text ul {
+        padding-left: 1.5rem;
+        list-style: none;
+      }
+      
+      &__text p {
+        margin: 0;
+        padding: 15px;
+      }
+    }
+    
+    &__content.open {
+      max-height: 300px;
+    }
   }
   
   .collapse-container {
     padding: 0;
-  }
-  
-  .collapse-container__title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 700;
-    color: $color-secondary;
-    border-radius: 5px;
-  }
-  
-  .collapse-container__arrow i {
-    transition: transform 0.5s ease-in-out;
-    transform: rotate(-180deg);
-    color: $color-secondary;
+
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 700;
+      color: $color-secondary;
+      border-radius: 5px;
+    }
+    
+    &__arrow i {
+      transition: transform 0.5s ease-in-out;
+      transform: rotate(-180deg);
+      color: $color-secondary;
+    }
+    
   }
   
   .collapse.close .collapse-container__arrow i {
@@ -34,29 +60,5 @@
     color: $color-secondary;
   }
   
-  .collapse__content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    background-color: #f6f6f6;
-    transition: 0.5s ease-in-out;
-  }
   
-  .collapse__content.open {
-    max-height: 300px;
-    padding: 1rem;
-  }
-  
-  .collapse__content__text {
-    margin: 0;
-  }
-  
-  .collapse__content__text ul {
-    padding-left: 1.5rem;
-    list-style: none;
-  }
-  
-  .collapse__content__text p {
-    margin: 0;
-  }
   

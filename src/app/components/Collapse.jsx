@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 function Collapse({ title, content }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +15,9 @@ function Collapse({ title, content }) {
                 <h3 className="collapse-container__title" onClick={handleToggle}>
                     {title}
                         <div className="collapse-container__arrow">
-                            <i className={`fa-solid ${isOpen ? "fa-chevron-up" : "fa-chevron-down"}`} />
+                            <FontAwesomeIcon 
+                            icon={isOpen ? faChevronUp : faChevronDown}
+                            />
                         </div>
                 </h3>
             </div>

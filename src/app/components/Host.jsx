@@ -1,8 +1,8 @@
 function Host({ owner }) {
   return (
     <>
-      {owner.name}
-      <img src={owner.picture} />
+      <p className="host-name">{owner.name}</p>
+      <img className="host-img" src={owner.picture} />
     </>
   );
 }

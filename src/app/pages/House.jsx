@@ -9,6 +9,7 @@ import Rating from "../components/Rating";
 import Collapse from "../components/Collapse";
 
 function House() {
+  const [loading, setLoading] = useState(true)
   const [logement, setLogement] = useState({
     tags: [],
     equipments: [],
@@ -16,7 +17,7 @@ function House() {
     rating: "",
     title: "",
     host: { name: "", picture: "" },
-    location: "",
+    location: ""
   });
 
   const { id } = useParams();
@@ -25,10 +26,18 @@ function House() {
     logements.map((unit) => {
       if (unit.id === id) {
         setLogement(unit);
+           setLoading(false)
       }
-      return null;
+
+      setLoading(false)
+
+
     });
   }, [id]);
+
+  if(loading){
+    return <><div>Chargement ...</div></>
+  }
 
   if (!logement.id) {
     return <Error404 />;
@@ -42,15 +51,22 @@ function House() {
           pictures={logement.pictures}
           title={logement.title}
         />
-        <h2 className="house__title">{logement.title}</h2>
-        <p>{logement.location}</p>
-        <div className="house__host">
+        <div className="house-container">
+          <h2 className="house-container__title">{logement.title}</h2>
+          <p>{logement.location}</p>
+        <div className="house-container__tag">
+          <Tags tags={logement.tags} /></div>
+        </div>
+        <div className="house-info">
+        <div className="house-info__host">
           <Host owner={logement.host} />
         </div>
-        <div><Rating stars={logement.rating} /></div>
-        <div><Tags tags={logement.tags} /></div>
-        <div><Collapse content={logement.description} title="Description" /></div>
-        <div><Collapse content={logement.equipments} title="Équipements" /></div>  
+          <div className="house-info__rating"><Rating stars={logement.rating} /></div>
+        </div>
+        <div className="house-collapse">
+          <div><Collapse content={logement.description} title="Description" /></div>
+          <div><Collapse content={logement.equipments} title="Équipements" /></div>
+        </div>  
       </div>
     </>
   );

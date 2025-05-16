@@ -6,7 +6,7 @@ function Header() {
 			<img src={logo} alt="logo Kasa location immobilière" className="header__logo" />
 			<nav className="header__menu">
 			    <a href="/">Accueil</a>
-				<a href="/a-propos/">A Propos</a>
+				<a href="/about/">A Propos</a>
 			</nav>
 		</header>
 	)
