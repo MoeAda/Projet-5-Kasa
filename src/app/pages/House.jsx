@@ -52,20 +52,21 @@ function House() {
           title={logement.title}
         />
         <div className="house-container">
-          <h2 className="house-container__title">{logement.title}</h2>
-          <p>{logement.location}</p>
-        <div className="house-container__tag">
-          <Tags tags={logement.tags} /></div>
+          <div>
+          <h2 className="house__title">{logement.title}</h2>
+          <p className="house__text">{logement.location}</p>
+          <div className="house__tag"><Tags tags={logement.tags} /></div>
+          </div>
+          <div className="house-info">
+            <div className="house-info__host">
+              <Host owner={logement.host} />
+            </div>
+            <div className="house-info__rating"><Rating stars={logement.rating} /></div>
+          </div>
         </div>
-        <div className="house-info">
-        <div className="house-info__host">
-          <Host owner={logement.host} />
-        </div>
-          <div className="house-info__rating"><Rating stars={logement.rating} /></div>
-        </div>
-        <div className="house-collapse">
-          <div><Collapse content={logement.description} title="Description" /></div>
-          <div><Collapse content={logement.equipments} title="Équipements" /></div>
+          <div className="house-collapse">
+            <Collapse content={logement.description} title="Description" />
+            <Collapse content={logement.equipments} title="Équipements" />
         </div>  
       </div>
     </>

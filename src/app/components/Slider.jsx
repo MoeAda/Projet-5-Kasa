@@ -19,20 +19,19 @@ const ImageSlider = ({ pictures, title }) => {
       {length > 1 && (
         <>
           <div onClick={handlePreviewClick} className="slider__arrow arrowLeft">❰</div>
-          <div>
-            <img src={pictures[currentIndex]} alt={title} className="slider__img"/>
+          <div className="slider__wrapper">
+          {pictures.map((picture, index) => (
+            <img
+            key={index}
+            src={picture}
+            alt={`${title} ${index + 1}`}
+            className={`slider__img ${index === currentIndex ? "active" : ""}`}
+            />
+          ))}
           </div>
           <div onClick={handleForwardClick} className="slider__arrow arrowRight">❱</div>
-          <div className="slider__dotcontainer">
-            {pictures.map((_, index) => (
-              <button
-                key={index}
-                className={currentIndex === index ? "slider__dot dot-active" : "slider__dot dot-inactive"}
-                onClick={() => setCurrentIndex(index)}
-              >
-                ●
-              </button>
-            ))}
+          <div className="slider__container">
+          <span className="slider__counter">{currentIndex + 1} / {length}</span>
           </div>
         </>
       )}

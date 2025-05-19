@@ -2,6 +2,10 @@
     color: $color-primary;
     font-size: 18px;
     font-weight: 500;
+
+    @media (max-width: 375px) {
+        font-size: 12px;
+    }
 }
 
 .host-img {

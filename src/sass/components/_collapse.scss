@@ -1,22 +1,35 @@
 .collapse {
-    overflow: hidden;
-    transition: all 0.3s ease;
-    background-color: $color-primary;
-    border-radius: 10px;
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  background-color: transparent;
+
+  @media (max-width: 375px) {
+    border-radius: 5px;
+  }
 
     &__content {
       max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-      background-color: #f6f6f6;
-      transition: 0.5s ease-in-out;
+    opacity: 0;
+    overflow: hidden;
+    background-color: #f6f6f6;
+    transition: max-height 0.9s ease-in-out, opacity 1s ease-in-out;
 
       &__text {
         margin: 0;
+        font-size: 18px;
+        font-weight: 400;
+
+      @media (max-width: 375px) {
+        font-size: 12px;
+      }
       }
       
       &__text ul {
-        padding-left: 1.5rem;
+        padding-left: 15px;
         list-style: none;
       }
       
@@ -27,12 +40,24 @@
     }
     
     &__content.open {
-      max-height: 300px;
+      max-height: 500px;
+      opacity: 1;
     }
   }
   
-  .collapse-container {
-    padding: 0;
+.collapse-container {
+  background-color: $color-primary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $color-secondary;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 10px 10px 0 0;
+
+  @media (max-width: 375px) {
+    border-radius: 5px 5px 0 0;
+  }
 
     &__title {
       display: flex;
@@ -44,21 +69,29 @@
       font-weight: 700;
       color: $color-secondary;
       border-radius: 5px;
+
+      @media (max-width: 375px) {
+        font-size: 13px;
+        border-radius: 5px;
+      }
+    }
+    
+    &__arrow {
+      padding: 0 15px;
     }
     
     &__arrow i {
       transition: transform 0.5s ease-in-out;
-      transform: rotate(-180deg);
+      transform: rotate(0deg);
       color: $color-secondary;
+      display: inline-block;
     }
     
   }
   
   .collapse.close .collapse-container__arrow i {
-    transition: transform 0.5s ease-in-out;
-    transform: rotate(0deg);
+    transform: rotate(180deg);
     color: $color-secondary;
   }
-  
   
   

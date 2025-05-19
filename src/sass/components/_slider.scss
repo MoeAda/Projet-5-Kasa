@@ -1,53 +1,102 @@
 .slider {
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        min-height: 415px;
-        max-height: 1240px;
-        width: 100%;
-        margin-top: 40px;
-        margin-bottom: 20px;
-      }; 
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 415px;
+  max-height: 1240px;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 20px;
 
-.slider__img {
-    object-fit: cover;
+  @media (max-width: 375px) {
+    margin-top: 30px;
+    min-height: 0;
+  }
+
+  &__wrapper {
+    position: relative;
     width: 100%;
     height: 415px;
     border-radius: 25px;
-};
+    overflow: hidden;
 
- .slider__arrow {
+    @media (max-width: 375px) {
+      height: 255px;
+      border-radius: 10px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 415px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    border-radius: 25px;
+    z-index: 0;
+
+    @media (max-width: 375px) {
+      height: 255px;
+      border-radius: 10px;
+    }
+  }
+  
+  &__img.active {
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  &__arrow {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
     font-size: 45px;
     color: #FFF;
-    z-index: 1;
+    z-index: 10;
     cursor: pointer;
-  };
 
-  .arrowLeft {
-    left: 1rem;
-    left: 32px;
-  }
-  
-  .arrowRight {
-    right: 1rem;
-    right: 32px;
+    @media (max-width: 375px) {
+      font-size: 25px;
+    }
   }
 
-  .slider__dotcontainer {
-    display: flex;
+  &__container {
     position: absolute;
-    z-index: 1;
-    left: 45%;
-    top: 90%;
+    z-index: 10;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+
+    @media (max-width: 375px) {
+      display: none;
+    }
   }
   
-  .slider__dot {
-    background-color: transparent;
-    border: none;
+  &__counter {
     color: white;
-    font-size: 20px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 18px;
   }
-  
+}
+
+.arrowLeft {
+  left: 32px;
+
+  @media (max-width: 375px) {
+    left: 10px;
+  }
+}
+
+.arrowRight {
+  right: 32px;
+
+  @media (max-width: 375px) {
+    right: 10px;
+  }
+}

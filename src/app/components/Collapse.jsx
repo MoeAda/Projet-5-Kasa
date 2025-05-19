@@ -11,15 +11,15 @@ function Collapse({ title, content }) {
 
     return (
         <div className={`collapse ${isOpen ? "open" : ""}`}>
-            <div className="collapse-container">
-                <h3 className="collapse-container__title" onClick={handleToggle}>
-                    {title}
-                        <div className="collapse-container__arrow">
+            <div className="collapse-container" onClick={handleToggle}>
+                <h3 className="collapse-container__title">
+                    {title}                        
+                </h3>
+                <div className="collapse-container__arrow">
                             <FontAwesomeIcon 
-                            icon={isOpen ? faChevronUp : faChevronDown}
+                            icon={isOpen ? faChevronDown : faChevronUp}
                             />
                         </div>
-                </h3>
             </div>
             <div className={`collapse__content ${isOpen ? "open" : ""}`}>
                 <div className={`collapse__content__text ${isOpen ? "collapse-container__content open" : ""}`}>
