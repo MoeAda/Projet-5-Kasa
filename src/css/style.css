@@ -322,6 +322,11 @@ a {
   font-weight: 500;
   margin: 0;
 }
+@media (max-width: 1024px) {
+  .house__title {
+    width: 80%;
+  }
+}
 @media (max-width: 375px) {
   .house__title {
     font-size: 18px;
