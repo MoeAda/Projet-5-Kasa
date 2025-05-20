@@ -3,7 +3,7 @@
     font-size: 18px;
     font-weight: 500;
 
-    @media (max-width: 375px) {
+    @media (min-width: 376px) and (max-width: 768px) {
         font-size: 12px;
     }
 }

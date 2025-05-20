@@ -8,7 +8,7 @@
     padding: 50px;
     margin: 40px;
 
-    @media (max-width: 375px) {
+    @media (min-width: 376px) and (max-width: 768px) {
         grid-template-columns: 1fr;
         grid-column-gap: 0;
         grid-row-gap: 20px;

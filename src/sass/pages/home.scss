@@ -6,7 +6,7 @@
     max-height: 1240px;
     margin: 50px 40px;
 
-    @media (max-width: 375px) {
+    @media (min-width: 376px) and (max-width: 768px) {
         margin: 30px 20px 20px;
         min-height: 0;
     }
@@ -20,7 +20,7 @@
         border-radius: 25px;
         background: rgba(0,0,0,0.5);
 
-        @media (max-width: 375px) {
+        @media (min-width: 376px) and (max-width: 768px) {
             height: 111px;
             border-radius: 10px;
         }
@@ -46,7 +46,7 @@
             left: 12%;
           }
 
-          @media (max-width: 375px) {
+          @media (min-width: 376px) and (max-width: 768px) {
             font-size: 24px;
             left: 5%;
             right: 25%;
@@ -60,7 +60,7 @@
         height: 223px;
         border-radius: 25px; 
 
-        @media (max-width: 375px) {
+        @media (min-width: 376px) and (max-width: 768px) {
             height: 111px;
             border-radius: 10px;
         }

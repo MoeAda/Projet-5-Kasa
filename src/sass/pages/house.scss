@@ -1,7 +1,7 @@
 .house {
     margin: 0 40px;
 
-    @media (max-width: 375px) {
+    @media (min-width: 376px) and (max-width: 768px) {
         margin: 20px;
     }
 
@@ -15,7 +15,7 @@
         width: 80%;
     }
 
-    @media (max-width: 375px) {
+    @media (min-width: 376px) and (max-width: 768px) {
         font-size: 18px;
     }
 }
@@ -25,7 +25,7 @@
     font-weight: 500;
     margin-top: 10px;
 
-    @media (max-width: 375px) {
+    @media (min-width: 376px) and (max-width: 768px) {
         font-size: 14px;
     }
 }
@@ -33,7 +33,7 @@
 &__tag {
     margin: 25px 0;
 
-    @media (max-width: 375px) {
+    @media (min-width: 376px) and (max-width: 768px) {
         margin: 0;
     }
 }
@@ -44,7 +44,7 @@
     flex-direction: row;
     justify-content: space-between;
 
-    @media (max-width: 375px) {
+    @media (min-width: 376px) and (max-width: 768px) {
         flex-direction: column;
     }
 }
@@ -54,7 +54,7 @@
     flex-direction: column;
     align-items: flex-end;
 
-    @media (max-width: 375px) {
+    @media (min-width: 376px) and (max-width: 768px) {
         flex-direction: row-reverse;
         align-items: center;
         justify-content: space-between;
@@ -66,7 +66,7 @@
     align-items: center;
     gap: 15px;
 
-    @media (max-width: 375px) {
+    @media (min-width: 376px) and (max-width: 768px) {
         gap: 0
     }
 }
@@ -74,14 +74,14 @@
 &__rating {
     margin-top: 15px;
 
-    @media (max-width: 375px) {
+    @media (min-width: 376px) and (max-width: 768px) {
         margin-top: 0;
     }
     
     .fa-star {
         margin: 5px;
 
-        @media (max-width: 375px) {
+        @media (min-width: 376px) and (max-width: 768px) {
             font-size: 12px;
         }
     }
@@ -97,7 +97,7 @@
 .host-img {
     height: 64px;
 
-    @media (max-width: 375px) {
+    @media (min-width: 376px) and (max-width: 768px) {
         height: 32px;
     }
 }
@@ -107,7 +107,7 @@
     flex-direction: row;
     gap: 15px;
 
-    @media (max-width: 375px) {
+    @media (min-width: 376px) and (max-width: 768px) {
         flex-direction: column;
         margin-top: 10px;
     }

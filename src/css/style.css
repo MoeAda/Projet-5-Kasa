@@ -1,6 +1,6 @@
 body {
   font-family: "Montserrat", serif;
-  max-width: 1200px;
+  max-width: 1920px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -20,7 +20,7 @@ a {
   padding: 50px;
   margin: 40px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .gallery {
     grid-template-columns: 1fr;
     grid-column-gap: 0;
@@ -73,12 +73,12 @@ a {
   justify-content: space-between;
   margin: 20px 40px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .header {
     margin: 20px;
   }
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .header__logo {
     height: 46px;
   }
@@ -91,7 +91,7 @@ a {
   padding: 20px;
   gap: 50px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .header__menu {
     padding: 0;
     gap: 30px;
@@ -105,7 +105,7 @@ a {
   font-size: 20px;
   font-weight: 500;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .header__link {
     font-size: 12px;
     text-transform: uppercase;
@@ -114,7 +114,7 @@ a {
 .header__link.active {
   border-bottom: 2px solid black;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .header__link.active {
     border-bottom: 1px solid black;
   }
@@ -128,7 +128,7 @@ a {
   max-height: 1240px;
   margin: 50px 40px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .banner {
     margin: 30px 20px 20px;
     min-height: 0;
@@ -143,7 +143,7 @@ a {
   border-radius: 25px;
   background: rgba(0, 0, 0, 0.5);
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .banner::after {
     height: 111px;
     border-radius: 10px;
@@ -165,7 +165,7 @@ a {
     left: 12%;
   }
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .banner__text {
     font-size: 24px;
     left: 5%;
@@ -179,7 +179,7 @@ a {
   height: 223px;
   border-radius: 25px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .banner__img {
     height: 111px;
     border-radius: 10px;
@@ -196,7 +196,7 @@ a {
   padding-bottom: 10px;
   margin-top: 50px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .footer {
     margin-top: 0;
   }
@@ -216,7 +216,7 @@ a {
   margin-top: 40px;
   margin-bottom: 20px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .slider {
     margin-top: 30px;
     min-height: 0;
@@ -229,7 +229,7 @@ a {
   border-radius: 25px;
   overflow: hidden;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .slider__wrapper {
     height: 255px;
     border-radius: 10px;
@@ -247,7 +247,7 @@ a {
   border-radius: 25px;
   z-index: 0;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .slider__img {
     height: 255px;
     border-radius: 10px;
@@ -266,7 +266,7 @@ a {
   z-index: 10;
   cursor: pointer;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .slider__arrow {
     font-size: 25px;
   }
@@ -278,7 +278,7 @@ a {
   bottom: 20px;
   transform: translateX(-50%);
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .slider__container {
     display: none;
   }
@@ -294,7 +294,7 @@ a {
 .arrowLeft {
   left: 32px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .arrowLeft {
     left: 10px;
   }
@@ -303,7 +303,7 @@ a {
 .arrowRight {
   right: 32px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .arrowRight {
     right: 10px;
   }
@@ -312,7 +312,7 @@ a {
 .house {
   margin: 0 40px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .house {
     margin: 20px;
   }
@@ -328,7 +328,7 @@ a {
     width: 80%;
   }
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .house__title {
     font-size: 18px;
   }
@@ -338,7 +338,7 @@ a {
   font-weight: 500;
   margin-top: 10px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .house__text {
     font-size: 14px;
   }
@@ -346,7 +346,7 @@ a {
 .house__tag {
   margin: 25px 0;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .house__tag {
     margin: 0;
   }
@@ -357,7 +357,7 @@ a {
   flex-direction: row;
   justify-content: space-between;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .house-container {
     flex-direction: column;
   }
@@ -368,7 +368,7 @@ a {
   flex-direction: column;
   align-items: flex-end;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .house-info {
     flex-direction: row-reverse;
     align-items: center;
@@ -381,7 +381,7 @@ a {
   align-items: center;
   gap: 15px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .house-info__host {
     gap: 0;
   }
@@ -389,7 +389,7 @@ a {
 .house-info__rating {
   margin-top: 15px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .house-info__rating {
     margin-top: 0;
   }
@@ -397,7 +397,7 @@ a {
 .house-info__rating .fa-star {
   margin: 5px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .house-info__rating .fa-star {
     font-size: 12px;
   }
@@ -412,7 +412,7 @@ a {
 .host-img {
   height: 64px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .host-img {
     height: 32px;
   }
@@ -423,7 +423,7 @@ a {
   flex-direction: row;
   gap: 15px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .house-collapse {
     flex-direction: column;
     margin-top: 10px;
@@ -439,7 +439,7 @@ a {
   transition: all 0.3s ease;
   background-color: transparent;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .collapse {
     border-radius: 5px;
   }
@@ -456,7 +456,7 @@ a {
   font-size: 16px;
   font-weight: 400;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .collapse__content__text {
     font-size: 12px;
   }
@@ -484,7 +484,7 @@ a {
   cursor: pointer;
   border-radius: 10px 10px 0 0;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .collapse-container {
     border-radius: 5px 5px 0 0;
   }
@@ -500,7 +500,7 @@ a {
   color: white;
   border-radius: 5px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .collapse-container__title {
     font-size: 13px;
     border-radius: 5px;
@@ -528,7 +528,7 @@ a {
   align-items: center;
   margin-bottom: 20px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .error-container {
     margin: 80px 20px;
   }
@@ -538,12 +538,12 @@ a {
   font-size: 150px;
   font-weight: 700;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .error-container h1 {
     font-size: 96px;
   }
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .error-container span {
     display: none;
   }
@@ -554,7 +554,7 @@ a {
   font-weight: 500;
   margin-bottom: 100px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .error-container p {
     font-size: 18px;
     width: 70%;
@@ -568,7 +568,7 @@ a {
   text-decoration: underline;
   margin-bottom: 50px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .error-container a {
     font-size: 14px;
   }
@@ -582,7 +582,7 @@ a {
   margin: 0 120px;
   gap: 30px;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .collapses {
     margin: 20px;
     gap: 10px;
@@ -603,7 +603,7 @@ a {
   font-size: 12px;
   font-weight: 500;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .tag {
     font-size: 10px;
     font-weight: 700;
@@ -616,7 +616,7 @@ a {
   font-size: 18px;
   font-weight: 500;
 }
-@media (max-width: 375px) {
+@media (min-width: 376px) and (max-width: 768px) {
   .host-name {
     font-size: 12px;
   }
