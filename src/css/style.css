@@ -1,6 +1,8 @@
 body {
-  font-family: "Montserrat";
-  margin: 0;
+  font-family: "Montserrat", serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 a {
@@ -128,8 +130,7 @@ a {
 }
 @media (max-width: 375px) {
   .banner {
-    margin: 20px;
-    margin-top: 30px;
+    margin: 30px 20px 20px;
     min-height: 0;
   }
 }
@@ -452,7 +453,7 @@ a {
 }
 .collapse__content__text {
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
 }
 @media (max-width: 375px) {
@@ -508,16 +509,16 @@ a {
 .collapse-container__arrow {
   padding: 0 15px;
 }
-.collapse-container__arrow i {
-  transition: transform 0.5s ease-in-out;
-  transform: rotate(0deg);
-  color: white;
-  display: inline-block;
+.collapse-container__arrow {
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
 }
-
-.collapse.close .collapse-container__arrow i {
+.collapse-container__arrow svg {
+  transition: transform 0.3s ease;
+}
+.collapse-container__arrow .rotate {
   transform: rotate(180deg);
-  color: white;
 }
 
 .error-container {

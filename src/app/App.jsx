@@ -25,7 +25,3 @@ function App() {
 
 export default App;
 
-/* 
-        <Route path="/logement/:id" element={<Logement/>}></Route>
-        
-*/
